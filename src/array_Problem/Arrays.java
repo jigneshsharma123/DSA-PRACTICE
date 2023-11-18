@@ -60,6 +60,48 @@ public class Arrays {
 			return idx;
 		}
 	}
+	
+	
+	// Arrange the numbers in array 1,3,5....6,4,3;
+	//coding ninjas lecture 9 : Arrays
+	public static int[] populate(int[] arr, int n) {
+		
+		int startidx = 0;
+		int endidx =  n - 1;
+		int startValue = 1;
+		int endValue = 0;
+		int mid = (int) ((double) n / 2);
+         while(startidx != endidx) {
+        	 if(startidx==0) {
+        		 arr[startidx] = startValue;
+        	    startidx++;
+        	 }else {
+        		 arr[startidx] = startValue+=2;
+        	     startidx++;
+        	 }
+        	 if(endidx > mid) {
+        		 arr[endidx] = endValue+=2;
+        		 endidx--;
+        	 }
+        	 arr[mid] = n;
+        	 
+         } //end of the while;
+		
+		return arr;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public static void main(String[] args) {
 //		int arr[] = TakeInput();
 //		printArray(arr);
@@ -67,10 +109,14 @@ public class Arrays {
 //		int arr[] = {2,1,4};
 //		int ArraySum = sumOfArray(arr);
 //		System.out.printf("sum of the Array element is : %d",ArraySum);
-		int arr[] = {2,1,4};
-		int output = LinearSearch(arr,4);
-		System.out.print(output);
-		
+//		int arr[] = {2,1,4};
+//		int output = LinearSearch(arr,4);
+//		System.out.print(output);
+
+		int n = 9;
+	    int[] arr = new int[n];
+	     int[] outputArr =  populate(arr,n);
+	  printArray(outputArr);
 	}
 	
 	
