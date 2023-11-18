@@ -90,7 +90,18 @@ public class Arrays {
 		return arr;
 	}
 	
-	
+	//swap alternate element of the given array 
+	public static int[] swapAlternate(int[] arr) {
+		
+		int n = arr.length;
+		for(int i=0; i < n - 1; i+=2) {
+			int temp = arr[i];
+			arr[i] = arr[i+1];
+			arr[i+1] = temp;
+		}
+		
+		return arr;
+	}
 	
 	
 	
@@ -106,17 +117,22 @@ public class Arrays {
 //		int arr[] = TakeInput();
 //		printArray(arr);
 		
-//		int arr[] = {2,1,4};
+		int arr[] = {9,3,6,12,4,32};
 //		int ArraySum = sumOfArray(arr);
 //		System.out.printf("sum of the Array element is : %d",ArraySum);
 //		int arr[] = {2,1,4};
 //		int output = LinearSearch(arr,4);
 //		System.out.print(output);
 
-		int n = 9;
-	    int[] arr = new int[n];
-	     int[] outputArr =  populate(arr,n);
-	  printArray(outputArr);
+//		int n = 9;
+//	    int[] arr = new int[n];
+//	    int[] outputArr =  populate(arr,n);
+//	    printArray(outputArr);
+		
+		
+		int[] output = swapAlternate(arr);
+		 printArray(output);
+	    
 	}
 	
 	
