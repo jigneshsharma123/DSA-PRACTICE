@@ -41,14 +41,36 @@ public class Arrays {
 		
 		return sum;
 	}
-	
+	//method for performing linear search on the give array; 
+	public static int LinearSearch(int[] arr, int item) {
+		int n = arr.length;
+		int idx = -1;
+		int element  = 0;
+		for(int i = 0; i < n; i++) {
+			if(arr[i] == item) {
+			 idx = i;
+			 element = arr[i];
+			 break;
+			} //end of the if
+		} //end of the for loop
+		if(idx != -1) {
+			return idx;
+		}
+		else {
+			return idx;
+		}
+	}
 	public static void main(String[] args) {
 //		int arr[] = TakeInput();
 //		printArray(arr);
 		
+//		int arr[] = {2,1,4};
+//		int ArraySum = sumOfArray(arr);
+//		System.out.printf("sum of the Array element is : %d",ArraySum);
 		int arr[] = {2,1,4};
-		int ArraySum = sumOfArray(arr);
-		System.out.printf("sum of the Array element is : %d",ArraySum);
+		int output = LinearSearch(arr,4);
+		System.out.print(output);
+		
 	}
 	
 	
